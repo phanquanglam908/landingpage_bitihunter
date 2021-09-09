@@ -33,7 +33,6 @@ a {
 body {
    max-width: 1920px;
    margin: 0 auto;
-   overflow: hidden;
 }
 
 .container {
@@ -43,7 +42,7 @@ body {
 }
 
 .header {
-   min-height: 100vh;
+   height: 100%;
    position: relative;
 }
 
@@ -207,6 +206,9 @@ body {
 @media screen and (max-width: 767px) {
    .icon-bars {
       display: block;
+   }
+   .header-content {
+      overflow: hidden;
    }
 
    .menu {
