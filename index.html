@@ -22,8 +22,12 @@
                <img src="images/Hunter logo.png" alt="">
             </a>
 
-            <nav class="menu">
+            <nav class="menu" id="menu">
                <ul class="menu-list">
+                  <div class="icon icon-cancel js-btn-cancel">
+                     <i class="uil uil-times"></i>
+                  </div>
+
                   <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
                   <li class="menu-item"><a href="#" class="menu-link">About</a></li>
                   <li class="menu-item"><a href="#" class="menu-link">Shop</a></li>
@@ -31,7 +35,10 @@
                   <li class="menu-item"><a href="#" class="menu-link"><i class="uil uil-search"></i></a></li>
                </ul>
             </nav>
-            <i class="uil uil-bars bars"></i>
+
+            <div class="icon-bars js-btn-bars">
+               <i class="uil uil-bars "></i>
+            </div>
          </div>
 
          <div class="header-content">
@@ -57,6 +64,24 @@
          </div>
       </div>
    </header>
+
+   <script>
+      const btnBar = document.querySelector('.js-btn-bars');
+      const menu = document.getElementById('menu');
+      const btnClose = document.querySelector('.js-btn-cancel')
+      // Open Side-Bar
+      function openMenu() {
+         menu.style.right = 0;
+      }
+      // Close Side-Bar
+      function closeMenu() {
+         menu.style.right = -100 + "%";
+      }
+
+      btnBar.addEventListener('click', openMenu);
+      btnClose.addEventListener('click', closeMenu);
+
+   </script>
 </body>
 
 </html>
