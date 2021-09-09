@@ -44,6 +44,7 @@ body {
 .header {
    height: 100%;
    position: relative;
+   padding-bottom: 6.4rem;
 }
 
 .header-top {
@@ -231,6 +232,11 @@ body {
       padding-right: 2.5rem;
       color: var(--dark-color);
    }
+
+   .icon-cancel i {
+      padding: 1.5rem;
+   }
+
    .icon-cancel i:hover {
       cursor: pointer;
       color: var(--primary-color);
