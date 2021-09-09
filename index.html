@@ -21,21 +21,21 @@
             <a href="" class="logo-link">
                <img src="images/Hunter logo.png" alt="">
             </a>
+            <div class="navigation" id="navigation">
+               <nav class="menu" id="menu">
+                  <ul class="menu-list">
+                     <div class="icon icon-cancel js-btn-cancel">
+                        <i class="uil uil-times"></i>
+                     </div>
 
-            <nav class="menu" id="menu">
-               <ul class="menu-list">
-                  <div class="icon icon-cancel js-btn-cancel">
-                     <i class="uil uil-times"></i>
-                  </div>
-
-                  <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
-                  <li class="menu-item"><a href="#" class="menu-link">About</a></li>
-                  <li class="menu-item"><a href="#" class="menu-link">Shop</a></li>
-                  <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
-                  <li class="menu-item"><a href="#" class="menu-link"><i class="uil uil-search"></i></a></li>
-               </ul>
-            </nav>
-
+                     <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">About</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">Shop</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link"><i class="uil uil-search"></i></a></li>
+                  </ul>
+               </nav>
+            </div>
             <div class="icon-bars js-btn-bars">
                <i class="uil uil-bars "></i>
             </div>
@@ -69,15 +69,20 @@
       const btnBar = document.querySelector('.js-btn-bars');
       const menu = document.getElementById('menu');
       const btnClose = document.querySelector('.js-btn-cancel')
+      const nav = document.getElementById('navigation');
       // Open Side-Bar
       function openMenu() {
-         menu.style.right = 0;
+         menu.classList.add('open');
+         nav.style.right = 0;
+
       }
       // Close Side-Bar
       function closeMenu() {
-         menu.style.right = -100 + "%";
-      }
+         menu.classList.remove('open');
+         nav.style.right = -100 + "%";
 
+      }
+      nav.addEventListener('click', closeMenu)
       btnBar.addEventListener('click', openMenu);
       btnClose.addEventListener('click', closeMenu);
 

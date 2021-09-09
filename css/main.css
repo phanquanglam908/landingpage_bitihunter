@@ -212,6 +212,16 @@ body {
       overflow: hidden;
    }
 
+   .navigation {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+   }
+
    .menu {
       position: fixed;
       top: 0;
@@ -222,7 +232,14 @@ body {
       background: linear-gradient(-29deg, rgba(246, 65, 108, 1) 0%, rgba(255, 231, 130, 1) 100%);
       z-index: 1;
       padding: 0;
-      transition: 0.3s;
+      transition: all 0.5s ease;
+      z-index: 1;
+      opacity: 0;
+   }
+
+   .menu.open {
+      right: 0;
+      opacity: 1;
    }
 
    .icon-cancel {
